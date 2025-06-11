@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: server
+  datasource:
+    url: jdbc:mariadb://localhost:3306/kotlin_study
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    driver-class-name: org.mariadb.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create
+  data:
+    redis:
+      host: ${REDIS_HOST}
+      port: 6379
+  jwt:
+    secret-key: ${JWT_SECRET}
+    expiration: 300000
+    refresh-expiration: 2592000000
+    issuer: cher1shRXD
